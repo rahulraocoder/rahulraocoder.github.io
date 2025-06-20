@@ -57,24 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // PDF download functionality
-    document.getElementById('download-pdf').addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Add a print-specific class to the body
-        document.body.classList.add('print-mode');
-        
-        // Alert the user that their browser's print dialog will open
-        alert('Your browser will open a print dialog. Choose "Save as PDF" to download the resume.');
-        
-        // Trigger browser print functionality
-        window.print();
-        
-        // Remove the print-specific class after printing
-        setTimeout(() => {
-            document.body.classList.remove('print-mode');
-        }, 1000);
-    });
 
     // Add current year to footer copyright
     const currentYear = new Date().getFullYear();
